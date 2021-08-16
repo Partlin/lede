@@ -65,6 +65,8 @@ jobs:
 
       - name: Generate configuration file
         run: |
+          rm -f ./.config*
+          cp ./1.config ./.config
           make defconfig
 
       - name: Make download
